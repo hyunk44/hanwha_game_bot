@@ -5,7 +5,7 @@ import argparse
 from datetime import datetime
 
 # 슬랙 웹훅 URL
-SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOKURL"
+SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOKURL")
 
 # 스크립트 파일의 디렉토리
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
